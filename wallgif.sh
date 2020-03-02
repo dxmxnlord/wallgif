@@ -4,7 +4,8 @@ function rendergif(){
 	RENDER_SRC=$1
 	RENDER_SRC_DIR=$2
 	RENDER_SRC_SHORT=$3
-	FILE_COUNT=$(( $(ls "/tmp/wallgif/${RENDER_SRC_DIR}/" | wc -l) - 1))
+	# FILE_COUNT=$(( $(ls "/tmp/wallgif/${RENDER_SRC_DIR}/" | wc -l) - 1))
+	FILE_COUNT=$( ls /tmp/wallgif/${RENDER_SRC_DIR}/ | grep -cP "${RENDER_SRC_DIR}-\d+.png")
 	while [[ true ]]; do
 		MAP=0
 		while [[ $MAP -lt FILE_COUNT ]]; do
