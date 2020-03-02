@@ -1,8 +1,11 @@
 # wallgif
 shell script to make a live wallpaper from a gif
 
+![gif](demo.gif)
+
 ## Dependencies
 `imagemagick`
+`feh`
 
 ## Use
 
